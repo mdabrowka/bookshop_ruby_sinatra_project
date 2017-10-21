@@ -30,6 +30,23 @@ attr_accessor :first_name, :last_name
       return @first_name + " " + @last_name
     end
 
-    
+    def self.delete_all()
+      sql = "DELETE FROM authors"
+      values = []
+      SqlRunner.run(sql, values)
+     end
+
+     def delete
+       sql = "DELETE FROM authors WHERE id = $1"
+       values=[@id]
+       SqlRunner.run(sql, values)
+     end
+
+     def update
+      sql = "UPDATE authors SET (first_name, second_name) =
+     ($1, $2 ) WHERE id = $3"
+     values = [@first_name, @second_name]
+     SqlRunner.run(sql, values)
+    end
 
 end

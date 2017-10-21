@@ -1,3 +1,4 @@
+require_relative('author.rb')
 require_relative('../db/sql_runner.rb')
 
 class Book
@@ -34,10 +35,28 @@ class Book
     def author
        sql = "SELECT * FROM authors WHERE id = $1"
        values = [@id]
-       results = SqlRunner.run(sql, values)
-       author_hash = results.first
-       author = Author.new(author_hash)
+       results = SqlRunner.run(sql, values)[0]
+       author = Author.new(results)
        return author.full_name
+     end
+
+     def self.delete_all()
+       sql = "DELETE FROM books"
+       values = []
+       SqlRunner.run(sql, values)
+      end
+
+      def delete
+        sql = "DELETE FROM books WHERE id = $1"
+        values=[@id]
+        SqlRunner.run(sql, values)
+      end
+
+      def update
+       sql = "UPDATE books SET (title, author_id, genre, source_language, buy_price, sell_price) =
+      ($1, $2, $3, $4, $5, $6 ) WHERE id = $7"
+      values = [@title, @author_id, @genre, @source_language, @buy_price, @sell_price]
+      SqlRunner.run(sql, values)
      end
 
 end
