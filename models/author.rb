@@ -18,4 +18,18 @@ attr_accessor :first_name, :last_name
     @id = result.to_i
   end
 
+  def self.all
+      sql = "SELECT * FROM authors"
+      values = []
+      result = SqlRunner.run(sql, values)
+      authors = result.map{|author| Author.new(author)}
+      return authors
+    end
+
+    def full_name
+      return @first_name + " " + @last_name
+    end
+
+    
+
 end
