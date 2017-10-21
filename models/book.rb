@@ -59,4 +59,14 @@ class Book
       SqlRunner.run(sql, values)
      end
 
+     def self.find(id)
+      sql = "SELECT * FROM books WHERE id = $1"
+      values = [id]
+      results = SqlRunner.run(sql,values)[0]
+      book = Book.new(results)
+      return book
+    end
+
+
+
 end
