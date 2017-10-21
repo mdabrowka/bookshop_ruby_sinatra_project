@@ -11,6 +11,10 @@ attr_accessor :first_name, :last_name
     @last_name = options['last_name']
   end
 
+  def save
+    
+
+  end
 
 
 
