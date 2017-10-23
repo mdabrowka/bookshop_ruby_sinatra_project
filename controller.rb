@@ -13,6 +13,16 @@ get '/books/new' do
   erb(:new)
 end
 
+get '/books/new_author' do
+  erb(:new_author)
+end
+
+post '/books' do
+  @author = Author.new(params)
+  @author.save
+  erb(:author_created)
+end
+
 post '/books' do
   @book = Book.new(params)
   @book.save()
