@@ -65,4 +65,12 @@ attr_accessor :first_name, :last_name
      return author
    end
 
+   def self.find_by_full_name(fname, surname)
+    sql = "SELECT * FROM authors WHERE first_name = $1 AND last_name = $2"
+    values = [fname, surname]
+    results = SqlRunner.run(sql,values)[0]
+    author = Author.new(results)
+    return author
+  end
+
 end

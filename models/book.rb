@@ -82,7 +82,7 @@ class Book
 
 
     def markup
-      result = @sell_price / @buy_price * 100
+      result = ((@sell_price).to_f / (@buy_price).to_f) * 100
       return result
     end
 

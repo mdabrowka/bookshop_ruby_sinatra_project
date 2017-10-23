@@ -45,7 +45,7 @@ book2 = Book.new({
   'genre' => 'novel',
   'source_language' => 'Korean',
   'buy_price' => '8',
-  'sell_price' => '15'
+  'sell_price' => '60'
   })
 book2.save
 

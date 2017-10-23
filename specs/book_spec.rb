@@ -21,7 +21,7 @@ class BookTest < MiniTest::Test
     end
 
     def test_markup
-      assert_equal(200, @book1.markup)
+      assert_equal(2, @book1.markup)
     end
 
 

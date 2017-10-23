@@ -1,0 +1,30 @@
+<form method="post" action="/books">
+
+  <label for="author-select"> Select author: </label>
+    <select id="author-select" type="text" name="author_id">
+      <% for author in @authors %>
+        <option value="<%= author.id%>"> <%= author.full_name %></option>
+      <% end %>
+ </select>
+
+  <label for="title"> Title: </label>
+  <input id="title" type="text" name="title" />
+
+  <label for="genre"> Genre: </label>
+  <input id="genre" type="text" name="genre"/>
+
+  <label for="language"> Source language: </label>
+  <input id="language" type="text" name="source_language"/>
+
+  <label for="quantity"> Set quantity: </label>
+  <input id="quantity" type="number" name="quantity" />
+
+  <label for="buy-price"> Buy price: </label>
+  <input id="buy-price" type="number" name="buy_price" />
+
+  <label for="sell-price"> Sell price: </label>
+  <input id="sell-price" type="number" name="sell_price" />
+
+  <input type="submit" value="Add a book" />
+
+</form>
