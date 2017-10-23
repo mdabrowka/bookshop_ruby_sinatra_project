@@ -9,7 +9,7 @@ class Book
     def initialize(options)
       @id = options['id'].to_i if options['id']
       @title = options['title']
-      @author_id = options['author_id']
+      @author_id = options['author_id'].to_i
       @quantity = options['quantity'].to_i
       @genre = options['genre']
       @source_language = options['source_language']
@@ -36,10 +36,10 @@ class Book
 
     def author
        sql = "SELECT * FROM authors WHERE id = $1"
-       values = [@id]
-       results = SqlRunner.run(sql, values)[0]
-       author = Author.new(results)
-       return author.full_name
+       values = [@author_id]
+       result = SqlRunner.run(sql, values)[0]
+       author = Author.new(result)
+      return author.full_name
      end
 
      def self.delete_all()

@@ -26,9 +26,9 @@ attr_accessor :first_name, :last_name
       return authors
     end
 
-    def full_name
-      return @first_name + " " + @last_name
-    end
+      def full_name
+        return @first_name + " " + @last_name
+     end
 
     def find_books
        sql = "SELECT * FROM books WHERE author_id = $1"
