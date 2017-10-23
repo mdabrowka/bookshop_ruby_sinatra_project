@@ -30,6 +30,14 @@ attr_accessor :first_name, :last_name
       return @first_name + " " + @last_name
     end
 
+    def find_books
+       sql = "SELECT * FROM books WHERE author_id = $1"
+       values = [@id]
+       results = SqlRunner.run(sql, values)
+       books_array = results.map{|book| Book.new(book)}
+       return books_array
+     end
+
     def self.delete_all()
       sql = "DELETE FROM authors"
       values = []
@@ -48,5 +56,13 @@ attr_accessor :first_name, :last_name
      values = [@first_name, @second_name]
      SqlRunner.run(sql, values)
     end
+
+    def self.find(id)
+     sql = "SELECT * FROM authors WHERE id = $1"
+     values = [id]
+     results = SqlRunner.run(sql,values)[0]
+     author = Author.new(results)
+     return author
+   end
 
 end

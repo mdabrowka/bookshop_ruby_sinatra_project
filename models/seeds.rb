@@ -28,8 +28,9 @@ author5.save
 
 #Books seeds
 book1 = Book.new({
-  'title' => 'Sculptor\'s" Daughter',
+  'title' => 'Sculptor\'s Daughter',
   'author_id' => author5.id,
+  'quantity' => '17',
   'genre' => 'autobiography',
   'source_language' => 'Swedish',
   'buy_price' => '6',
@@ -40,6 +41,7 @@ book1.save
 book2 = Book.new({
   'title' => 'The Vegetarian',
   'author_id' => author2.id,
+  'quantity' => '23',
   'genre' => 'novel',
   'source_language' => 'Korean',
   'buy_price' => '8',
@@ -50,6 +52,7 @@ book2.save
 book3 = Book.new({
   'title' => 'Human Acts',
   'author_id' => author2.id,
+  'quantity' => '34',
   'genre' => 'novel',
   'source_language' => 'Korean',
   'buy_price' => '8',
@@ -60,6 +63,7 @@ book3.save
 book4 = Book.new({
   'title' => 'Enough',
   'author_id' => author4.id,
+  'quantity' => '27',
   'genre' => 'poetry',
   'source_language' => 'Polish',
   'buy_price' => '8',
@@ -70,6 +74,7 @@ book4.save
 book5 = Book.new({
   'title' => 'The Hour of a Star',
   'author_id' => author1.id,
+  'quantity' => '12',
   'genre' => 'novella',
   'source_language' => 'Brazilian Portuguese',
   'buy_price' => '6',
@@ -80,6 +85,7 @@ book5.save
 book6 = Book.new({
   'title' => 'The Selected Stories',
   'author_id' => author3.id,
+  'quantity' => '5',
   'genre' => 'short story',
   'source_language' => 'Catalan',
   'buy_price' => '9',
@@ -90,6 +96,7 @@ book6.save
 book7 = Book.new({
   'title' => 'Death in Spring',
   'author_id' => author3.id,
+  'quantity' => '3',
   'genre' => 'novel',
   'source_language' => 'Catalan',
   'buy_price' => '8',
@@ -100,8 +107,9 @@ book7.save
 book8 = Book.new({
   'title' => 'The Complete Stories',
   'author_id' => author1.id,
+  'quantity' => '9',
   'genre' => 'short story',
-  'source_language' => ' Brazilian Portuguese',
+  'source_language' => 'Brazilian Portuguese',
   'buy_price' => '8',
   'sell_price' => '16'
   })
@@ -110,6 +118,7 @@ book8.save
 book9 = Book.new({
   'title' => 'The White Book',
   'author_id' => author2.id,
+  'quantity' => '14',
   'genre' => 'autobiography',
   'source_language' => 'Korean',
   'buy_price' => '8',
