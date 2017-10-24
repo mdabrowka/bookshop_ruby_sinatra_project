@@ -7,7 +7,13 @@
 <p>Buy price: <%= @book.buy_price %> </p>
 <p>Sell price: <%= @book.sell_price %> </p>
 <p>Markup: <%= @book.markup %> </p>
-<p> Cover Image: <img src="<%= @book.cover_image %>" alt="Cover image of <%@book.title%>" class="cover-image"> </p>
+<%
+  cover = @book.cover_image
+  if cover == ''
+    cover = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Blue_question_mark_icon.svg/2000px-Blue_question_mark_icon.svg.png'
+  end
+%>
+<p> Cover Image: <img src="<%= cover %>" alt="Cover image of <%@book.title%>" class="cover-image"> </p>
 
 <p><a href="/books/<%= @book.id %>/edit">Edit Book</a></p>
 <form method="post" action="/books/<%= @book.id %>/delete">
