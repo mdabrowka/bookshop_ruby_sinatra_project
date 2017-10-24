@@ -24,10 +24,20 @@ get '/books/new_author' do #displays a form to add new authpr
   erb(:new_author)
 end
 
-post '/books' do #creates new author
+post '/author' do #creates new author
   @author = Author.new(params)
   @author.save
   erb(:author_created)
+end
+
+get '/books/new_genre' do
+  erb(:new_genre)
+end
+
+post '/books' do #creates new genre
+  @genre = Genre.new(params)
+  @genre.save
+  erb(:genre_created)
 end
 
 get '/books/:id' do #displays an individual book
