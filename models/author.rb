@@ -27,7 +27,7 @@ attr_accessor :first_name, :last_name
     end
 
       def full_name
-        return @first_name + " " + @last_name
+        return "#{@first_name} #{@last_name}"
      end
 
     def find_books
