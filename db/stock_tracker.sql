@@ -23,5 +23,5 @@ CREATE TABLE books (
    source_language VARCHAR(255),
    buy_price INT4,
    sell_price INT4,
-   image VARCHAR(255)
+   cover_image VARCHAR(255)
   );

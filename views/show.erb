@@ -6,7 +6,8 @@
 <p>In stock: <%= @book.quantity %> </p>
 <p>Buy price: <%= @book.buy_price %> </p>
 <p>Sell price: <%= @book.sell_price %> </p>
-<p>Markup: <%= @book.markup %>%</p>
+<p>Markup: <%= @book.markup %> </p>
+<p> Cover Image: <%= @book.cover_image %> </p>
 
 <p><a href="/books/<%= @book.id %>/edit">Edit Book</a></p>
 <form method="post" action="/books/<%= @book.id %>/delete">

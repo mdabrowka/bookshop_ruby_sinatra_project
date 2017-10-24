@@ -51,7 +51,8 @@ author1 = Author.new({'first_name' => 'Clarice',
    'genre_id' => genre2.id,
    'source_language' => 'Swedish',
    'buy_price' => '6',
-   'sell_price' => '13'
+   'sell_price' => '13',
+   'cover_image' => 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1385436215i/17558603._UY200_.jpg'
    })
  book1.save
 
@@ -62,7 +63,8 @@ author1 = Author.new({'first_name' => 'Clarice',
    'genre_id' => genre1.id,
    'source_language' => 'Korean',
    'buy_price' => '8',
-   'sell_price' => '60'
+   'sell_price' => '60',
+   'cover_image' => 'https://thediplomat.com/wp-content/uploads/2016/07/thediplomat_2016-07-07_11-45-57.jpg'
    })
  book2.save
 
@@ -73,7 +75,8 @@ author1 = Author.new({'first_name' => 'Clarice',
    'genre_id' => genre1.id,
    'source_language' => 'Korean',
    'buy_price' => '8',
-   'sell_price' => '10'
+   'sell_price' => '10',
+   'cover_image' => 'https://static1.squarespace.com/static/5019421184ae7e81bd01bf4e/551ef206e4b0170ec8abdbe0/56bbf4f562cd94f5f8c27ae7/1455158518149/HA+8-2-16.jpeg'
    })
  book3.save
 
@@ -84,7 +87,8 @@ author1 = Author.new({'first_name' => 'Clarice',
    'genre_id' => genre4.id,
    'source_language' => 'Polish',
    'buy_price' => '8',
-   'sell_price' => '16'
+   'sell_price' => '16',
+   'cover_image' => 'https://images.gr-assets.com/books/1428234270l/25300957.jpg'
    })
  book4.save
 
@@ -95,7 +99,8 @@ author1 = Author.new({'first_name' => 'Clarice',
    'genre_id' => genre1.id,
    'source_language' => 'Brazilian Portuguese',
    'buy_price' => '6',
-   'sell_price' => '13'
+   'sell_price' => '13',
+   'cover_image' => 'https://www.penguin.co.uk/content/dam/catalogue/pim/editions/277/9780141392035/cover.jpg'
    })
  book5.save
 
@@ -106,7 +111,8 @@ author1 = Author.new({'first_name' => 'Clarice',
    'genre_id' => genre3.id,
    'source_language' => 'Catalan',
    'buy_price' => '9',
-   'sell_price' => '13'
+   'sell_price' => '13',
+   'cover_image' => 'https://cdn.shopify.com/s/files/1/0282/5792/products/stories_highres.jpg?v=1384460804'
    })
  book6.save
 
@@ -117,7 +123,8 @@ author1 = Author.new({'first_name' => 'Clarice',
    'genre_id' => genre1.id,
    'source_language' => 'Catalan',
    'buy_price' => '8',
-   'sell_price' => '13'
+   'sell_price' => '13',
+   'cover_image' => 'https://images.gr-assets.com/books/1398195398l/6405181.jpg'
    })
  book7.save
 
@@ -128,7 +135,8 @@ author1 = Author.new({'first_name' => 'Clarice',
    'genre_id' => genre3.id,
    'source_language' => 'Brazilian Portuguese',
    'buy_price' => '8',
-   'sell_price' => '16'
+   'sell_price' => '16',
+   'cover_image' => 'https://www.penguin.co.uk/content/dam/catalogue/pim/editions/81/9780141197388/cover.jpg'
    })
  book8.save
 
@@ -139,7 +147,8 @@ author1 = Author.new({'first_name' => 'Clarice',
    'genre_id' => genre2.id,
    'source_language' => 'Korean',
    'buy_price' => '8',
-   'sell_price' => '10'
+   'sell_price' => '10',
+   'cover_image' => 'https://images-eu.ssl-images-amazon.com/images/I/31zi0ttmuDL.jpg'
    })
  book9.save
 
