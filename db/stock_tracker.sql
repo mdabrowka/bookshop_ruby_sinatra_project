@@ -22,5 +22,6 @@ CREATE TABLE books (
    genre_id INT4 REFERENCES genres(id),
    source_language VARCHAR(255),
    buy_price INT4,
-   sell_price INT4
+   sell_price INT4,
+   image VARCHAR(255)
   );

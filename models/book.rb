@@ -5,7 +5,7 @@ require_relative('../db/sql_runner.rb')
 class Book
 
   attr_reader :id
-  attr_accessor :title, :author_id, :quantity, :genre_id, :source_language, :buy_price, :sell_price
+  attr_accessor :title, :author_id, :quantity, :genre_id, :source_language, :buy_price, :sell_price, :image
 
     def initialize(options)
       @id = options['id'].to_i if options['id']
@@ -16,6 +16,7 @@ class Book
       @source_language = options['source_language']
       @buy_price = options['buy_price'].to_i
       @sell_price = options['sell_price'].to_i
+      @image = options['image']
     end
 
 
