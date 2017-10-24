@@ -53,5 +53,13 @@ attr_accessor :type
      return genre
    end
 
+   def find_books
+      sql = "SELECT * FROM book WHERE genre_id = $1"
+      values = [@id]
+      results = SqlRunner.run(sql, values)
+      books_array = results.map{|book| Book.new(book)}
+      return books_array
+    end
+
 
 end
