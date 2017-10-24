@@ -44,7 +44,7 @@ class Book
      end
 
      def genre
-        sql = "SELECT * FROM genre WHERE id = $1"
+        sql = "SELECT * FROM genres WHERE id = $1"
         values = [@genre_id]
         result = SqlRunner.run(sql, values)[0]
         genre = Genre.new(result)

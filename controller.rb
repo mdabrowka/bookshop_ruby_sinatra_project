@@ -10,6 +10,7 @@ end
 
 get '/books/new' do #displays a new book form with dropdown menu of authors
   @authors = Author.all
+  @genres = Genre.all
   erb(:new)
 end
 

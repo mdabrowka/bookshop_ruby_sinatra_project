@@ -10,8 +10,13 @@
   <label for="title"> Title: </label>
   <input id="title" type="text" name="title" />
 
-  <label for="genre"> Genre: </label>
-  <input id="genre" type="text" name="genre"/>
+
+  <label for="genre-select"> Select genre: </label>
+    <select id="genre-select" type="text" name="genre_id">
+      <% for genre in @genres %>
+        <option value="<%= genre.id %>"> <%= genre.type %></option>
+      <% end %>
+ </select>
 
   <label for="language"> Source language: </label>
   <input id="language" type="text" name="source_language"/>
