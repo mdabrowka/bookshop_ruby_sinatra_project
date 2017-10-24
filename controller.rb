@@ -34,7 +34,7 @@ get '/books/new_genre' do
   erb(:new_genre)
 end
 
-post '/books' do #creates new genre
+post '/genre' do #creates new genre
   @genre = Genre.new(params)
   @genre.save
   erb(:genre_created)
