@@ -3,7 +3,9 @@
   <label for="author-select"> Select author: </label>
     <select id="author-select" type="text" name="author_id">
       <% for author in @authors %>
-        <option value="<%= author.id%>"> <%= author.full_name %></option>
+      <% if author.id == @book.author_id %>
+        <option selected ="selected" value ="<%= author.id%>"> <%= author.full_name %></option>
+      <% end %>
       <% end %>
  </select>
 

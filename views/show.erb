@@ -8,8 +8,7 @@
 <p>Sell price: <%= @book.sell_price %> </p>
 <p>Markup: <%= @book.markup %>%</p>
 
-<p><a href="/books/new_author">Edit book</a></p>
-
+<p><a href="/books/<%= @book.id %>/edit">Edit Book</a></p>
 <form method="post" action="/books/<%= @book.id %>/delete">
   <input type="submit" value="Delete Book"/>
 </form>

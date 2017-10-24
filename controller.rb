@@ -34,17 +34,19 @@ get '/books/:id' do
   erb(:show)
 end
 
-# get '/books/:id/edit' do
-#   @book = Book.find(params[:id])
-#   erb(:edit)
-# end
-#
-# post '/books/:id' do
-#   Book.new(params).update
-#   redirect to '/books'
-# end
+ get '/books/:id/edit' do
+   @authors = Author.all
+  #  @autor = Author.find(params[:id])
+   @book = Book.find(params[:id])
+   erb(:edit)
+ end
 
-post '/books/:id/delete' do 
+ post '/books/:id' do
+   Book.new(params).update
+   redirect to '/books'
+ end
+
+post '/books/:id/delete' do
   book = Book.find(params[:id])
   book.delete()
   redirect to '/books'
