@@ -12,7 +12,7 @@ class Book
       @title = options['title']
       @author_id = options['author_id'].to_i
       @quantity = options['quantity'].to_i
-      @genre_id = options['genre_id'],to_i
+      @genre_id = options['genre_id'].to_i
       @source_language = options['source_language']
       @buy_price = options['buy_price'].to_i
       @sell_price = options['sell_price'].to_i
