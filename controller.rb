@@ -47,6 +47,7 @@ end
 
   get '/books/:id/edit' do #displays a form with pre-populated book info
     @authors = Author.all
+    @genres = Genre.all
     @book = Book.find(params[:id])
     erb(:edit)
   end

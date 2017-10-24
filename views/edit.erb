@@ -14,10 +14,16 @@
     value="<%= @book.title %>"
    />
 
-  <label for="genre"> Genre: </label>
-  <input id="genre" type="text" name="genre"
-    value="<%= @book.genre %>"
-  />
+
+  <label for="genre-select"> Select genre: </label>
+    <select id="genre-select" type="text" name="genre_id">
+      <% for genre in @genres %>
+      <% if genre.id == @book.genre_id %>
+        <option selected ="selected" value ="<%= genre.id%>"> <%= genre.type %></option>
+      <% end %>
+      <% end %>
+  </select>
+
 
   <label for="language"> Source language: </label>
   <input id="language" type="text" name="source_language"
