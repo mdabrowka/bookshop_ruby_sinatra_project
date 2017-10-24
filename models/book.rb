@@ -57,7 +57,7 @@ class Book
       def update
        sql = "UPDATE books SET (title, author_id, quantity, genre, source_language, buy_price, sell_price) =
       ($1, $2, $3, $4, $5, $6, $7 ) WHERE id = $8"
-      values = [@title, @author_id, @quantity, @genre, @source_language, @buy_price, @sell_price]
+      values = [@title, @author_id, @quantity, @genre, @source_language, @buy_price, @sell_price, @id]
       SqlRunner.run(sql, values)
      end
 
