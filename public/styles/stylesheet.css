@@ -90,3 +90,13 @@ select, input {
 th, td {
   padding: 10px;
 }
+/*Stock levels*/
+.high {
+  color: green;
+}
+.medium {
+  color: orange;
+}
+.low  {
+  color: red;
+}

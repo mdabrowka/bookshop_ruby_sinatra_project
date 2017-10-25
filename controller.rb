@@ -26,7 +26,7 @@ post '/books' do #creates new book
   erb(:create)
 end
 
-get '/books/new_author' do #displays a form to add new authpr
+get '/books/new_author' do #displays a form to add new author
   erb(:new_author)
 end
 

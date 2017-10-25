@@ -17,7 +17,6 @@
     value="<%= @book.title %>"
   />
 
-
   <label for="genre-select"> Select genre: </label>
     <select id="genre-select" type="text" name="genre_id">
       <% for genre in @genres %>
@@ -28,7 +27,6 @@
       <% end %>
       <% end %>
   </select>
-
 
   <label for="language"> Source language: </label>
   <input id="language" type="text" name="source_language"
@@ -51,7 +49,7 @@
    />
 
    <label for="cover-image"> Cover image: </label>
-   <input id="cover-image" type="text" name="cover-image"
+   <input id="cover-image" type="text" name="cover_image"
      value="<%= @book.cover_image %>"
     />
 

@@ -11,7 +11,7 @@
   <tr>
     <td><%= book.author %></td>
     <td><%= book.title %></td>
-    <td><%= book.stock_level %></td>
+    <td><span class="<%= book.stock_level.downcase %>"><%= book.stock_level %></span></td>
     <td><a href="/books/<%= book.id %>">View book</a></td>
   </tr>
 <% end %>
