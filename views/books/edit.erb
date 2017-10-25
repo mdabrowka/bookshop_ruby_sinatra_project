@@ -1,3 +1,4 @@
+<h2>Edit <%=@book.title%> by <%=@book.author%></h2>
 <form method="post" action="/books/<%= @book.id %>">
 
   <label for="author-select"> Select author: </label>
@@ -9,12 +10,12 @@
         <option value="<%= author.id%>"> <%= author.full_name %></option>
       <% end %>
       <% end %>
- </select>
+    </select>
 
   <label for="title"> Title: </label>
   <input id="title" type="text" name="title"
     value="<%= @book.title %>"
-   />
+  />
 
 
   <label for="genre-select"> Select genre: </label>

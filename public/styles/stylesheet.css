@@ -4,16 +4,64 @@ html {
 }
 
 /*navigation*/
+nav {
+  border-bottom: 1px solid grey;
+}
+
+
 nav ul {
   padding: 0;
 }
 
 nav ul li {
   display: inline;
+  margin-right: 10px;
 }
 
-main {
-  padding-left: 20px;
+nav a {
+  display: inline-block;
+  background-color: pink;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 14px;
+}
+
+nav a:hover{
+  background-color: black;
+  color: white;
+}
+
+/*main*/
+body {
+  padding: 0 20px 0 20px;
+}
+
+/*footer*/
+footer {
+  border-top: 1px solid grey;
+}
+
+
+footer ul {
+  padding: 0;
+}
+
+footer ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+footer a {
+  display: inline-block;
+  background-color: pink;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 14px;
+}
+
+footer a:hover{
+  background-color: black;
+  color: white;
 }
 
 /*cover image sizing*/
@@ -36,4 +84,9 @@ label {
 }
 select, input {
   margin-bottom: 15px;
+}
+
+/*tables*/
+th, td {
+  padding: 10px;
 }
