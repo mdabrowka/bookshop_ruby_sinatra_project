@@ -29,6 +29,10 @@ end
 
 get '/books/:id' do #displays an individual book
   @book = Book.find(params[:id])
+  @books = Book.all
+  index = @books.find_index {|book| book.id == params[:id].to_i()}
+  @idplusone = @books[(index + 1)].id
+  @idminusone = @books[(index - 1)].id
   erb(:"books/show")
 end
 
