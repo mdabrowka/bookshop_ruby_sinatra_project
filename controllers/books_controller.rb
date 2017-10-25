@@ -5,6 +5,7 @@ require_relative( '../models/author.rb' )
 require_relative( '../models/genre.rb' )
 
 
+
 get '/welcome' do
   @books = Book.all
   erb(:low_stock)
@@ -30,9 +31,21 @@ end
 get '/books/:id' do #displays an individual book
   @book = Book.find(params[:id])
   @books = Book.all
+
   index = @books.find_index {|book| book.id == params[:id].to_i()}
-  @idplusone = @books[(index + 1)].id
-  @idminusone = @books[(index - 1)].id
+
+  if index != @books.length - 1
+    @idplusone = @books[(index + 1)].id
+  else
+    @idplusone = @books[0].id
+  end
+
+  if index != 0
+     @idminusone = @books[(index - 1)].id
+  else
+     @idminusone = @books[@books.length-1].id
+  end
+
   erb(:"books/show")
 end
 
