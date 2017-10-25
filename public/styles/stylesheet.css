@@ -1,0 +1,39 @@
+/*default document style*/
+html {
+  font-family: sans-serif;
+}
+
+/*navigation*/
+nav ul {
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+main {
+  padding-left: 20px;
+}
+
+/*cover image sizing*/
+.cover-image {
+  width: 100px;
+  height: 150px;
+}
+
+.big-cover-image {
+  width: 250px;
+}
+
+/*forms*/
+label, select, input {
+  display: block;
+}
+label {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+select, input {
+  margin-bottom: 15px;
+}

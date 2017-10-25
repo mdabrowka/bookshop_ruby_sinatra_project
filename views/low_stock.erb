@@ -1,8 +1,28 @@
-<% for book in @books %>
-<%if book.stock_level == "Low"%>
-<p> Author: <%= book.author %> </p>
-<p> Title: <%= book.title %> </p>
-<p> Stock level: <%= book.stock_level %> </p>
-<p><a href="/books/<%= book.id %>">More about this book</a></p>
-<% end %>
-<% end %>
+<h2>Low stock books</h2>
+
+<table>
+  <tr>
+    <th>Author</th>
+    <th>Title</th>
+    <th>Cover</th>
+    <th>Stock</th>
+    <th>Action</th>
+  </tr>
+  <% for book in @books %>
+  <%if book.stock_level == "Low"%>
+  <tr>
+    <td><%= book.author %></td>
+    <td><%= book.title %></td>
+  <%
+    cover = book.cover_image
+    if cover == ''
+      cover = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Blue_question_mark_icon.svg/2000px-Blue_question_mark_icon.svg.png'
+    end
+  %>
+    <td><img src="<%= cover %>" alt="Cover image of <%book.title%>" class="cover-image"></td>
+    <td><%= book.stock_level %></td>
+    <td><a href="/books/<%= book.id %>">View book</a></td>
+  </tr>
+  <% end %>
+  <% end %>
+</table>

@@ -1,6 +1,19 @@
+<h2>All stock</h2>
+
+<table>
+  <tr>
+    <th>Author</th>
+    <th>Title</th>
+    <th>Stock</th>
+    <th>Action</th>
+  </tr>
 <% for book in @books %>
-<p> Author: <%= book.author %> </p>
-<p> Title: <%= book.title %> </p>
-<p> Stock level: <%= book.stock_level %> </p>
-<p><a href="/books/<%= book.id %>">More about this book</a></p>
+  <tr>
+    <td><%= book.author %></td>
+    <td><%= book.title %></td>
+    <td><%= book.stock_level %></td>
+    <td><a href="/books/<%= book.id %>">View book</a></td>
+  </tr>
 <% end %>
+
+</table>
