@@ -5,5 +5,5 @@ require_relative('controllers/genres_controller')
 require_relative('controllers/books_controller')
 
 get '/' do
-  erb( :index )
+  erb(:low_stock)
 end
