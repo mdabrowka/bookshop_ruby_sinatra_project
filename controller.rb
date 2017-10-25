@@ -3,6 +3,12 @@ require('sinatra/contrib/all')
 require_relative('./models/author.rb')
 require_relative('./models/book.rb')
 
+get '/welcome' do
+  @books = Book.all
+  erb(:low_stock)
+end
+
+
 get '/books' do #displays all books
   @books = Book.all
   erb(:index)

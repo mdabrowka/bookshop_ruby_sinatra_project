@@ -1,6 +1,8 @@
 <% for book in @books %>
+<%if book.stock_level == "Low"%>
 <p> Author: <%= book.author %> </p>
 <p> Title: <%= book.title %> </p>
 <p> Stock level: <%= book.stock_level %> </p>
 <p><a href="/books/<%= book.id %>">More about this book</a></p>
+<% end %>
 <% end %>
