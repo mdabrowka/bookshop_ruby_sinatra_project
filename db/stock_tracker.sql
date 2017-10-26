@@ -1,7 +1,13 @@
 DROP TABLE books;
 DROP TABLE genres;
 DROP TABLE authors;
+DROP TABLE source_languages;
 
+
+CREATE TABLE source_languages (
+  id SERIAL8 PRIMARY KEY,
+  language VARCHAR(255)
+);
 
 CREATE TABLE authors (
   id SERIAL8 PRIMARY KEY,
@@ -20,7 +26,7 @@ CREATE TABLE books (
    author_id INT4 REFERENCES authors(id),
    quantity INT4,
    genre_id INT4 REFERENCES genres(id),
-   source_language VARCHAR(255),
+   source_language_id INT4 REFERENCES source_languages(id),
    buy_price INT4,
    sell_price INT4,
    cover_image VARCHAR(255)
