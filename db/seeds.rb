@@ -1,8 +1,8 @@
 require('pry')
-require_relative('author.rb')
-require_relative('book.rb')
-require_relative('genre.rb')
-require_relative('source_language.rb')
+require_relative('../models/author.rb')
+require_relative('../models/book.rb')
+require_relative('../models/genre.rb')
+require_relative('../models/source_language.rb')
 
 
  Book.delete_all
