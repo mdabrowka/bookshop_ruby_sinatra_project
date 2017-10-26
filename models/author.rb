@@ -1,4 +1,7 @@
 require_relative('../db/sql_runner.rb')
+require_relative('book.rb')
+require_relative('genre.rb')
+require_relative('source_language.rb')
 
 class Author
 

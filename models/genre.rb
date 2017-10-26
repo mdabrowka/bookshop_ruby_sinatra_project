@@ -1,4 +1,7 @@
 require_relative('../db/sql_runner.rb')
+require_relative('author.rb')
+require_relative('book.rb')
+require_relative('source_language.rb')
 
 class Genre
 
@@ -54,7 +57,7 @@ attr_accessor :type
    end
 
    def find_books
-      sql = "SELECT * FROM book WHERE genre_id = $1"
+      sql = "SELECT * FROM books WHERE genre_id = $1"
       values = [@id]
       results = SqlRunner.run(sql, values)
       books_array = results.map{|book| Book.new(book)}
