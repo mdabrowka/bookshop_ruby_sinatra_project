@@ -6,7 +6,7 @@
       <% for author in @authors %>
         <option value="<%= author.id %>"> <%= author.full_name %></option>
       <% end %>
- </select>
+    </select>
 
   <label for="title"> Title: </label>
   <input id="title" type="text" name="title" />
@@ -17,14 +17,14 @@
       <% for genre in @genres %>
         <option value="<%= genre.id %>"> <%= genre.type %></option>
       <% end %>
- </select>
+    </select>
 
   <label for="language-select"> Select source language: </label>
-  <select id="language-select" type="text" name="source_language_id"/>
-    <% for source_language in @source_languages %>
-      <option value="<%= source_language.id %>"> <%= source_language.language %></option>
+    <select id="language-select" type="text" name="source_language_id"/>
+      <% for source_language in @source_languages %>
+        <option value="<%= source_language.id %>"> <%= source_language.language %></option>
       <% end %>
-</select>
+    </select>
 
   <label for="quantity"> Set quantity: </label>
   <input id="quantity" type="number" name="quantity" />

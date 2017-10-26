@@ -21,47 +21,46 @@ attr_accessor :language
   end
 
   def self.all
-      sql = "SELECT * FROM source_languages"
-      values = []
-      result = SqlRunner.run(sql, values)
-      languages = result.map{|language| SourceLanguage.new(language)}
-      return languages
-    end
+    sql = "SELECT * FROM source_languages"
+    values = []
+    result = SqlRunner.run(sql, values)
+    languages = result.map{|language| SourceLanguage.new(language)}
+    return languages
+  end
 
-    def self.delete_all()
-      sql = "DELETE FROM source_languages"
-      values = []
-      SqlRunner.run(sql, values)
-     end
+  def self.delete_all()
+    sql = "DELETE FROM source_languages"
+    values = []
+    SqlRunner.run(sql, values)
+  end
 
-     def delete
-       sql = "DELETE FROM source_languages WHERE id = $1"
-       values=[@id]
-       SqlRunner.run(sql, values)
-     end
+  def delete
+    sql = "DELETE FROM source_languages WHERE id = $1"
+    values=[@id]
+    SqlRunner.run(sql, values)
+  end
 
-     def update
-      sql = "UPDATE source_languages SET (language) =
-     ($1) WHERE id = $2"
-     values = [@language]
-     SqlRunner.run(sql, values)
-    end
+  def update
+    sql = "UPDATE source_languages SET (language) =
+    ($1) WHERE id = $2"
+    values = [@language]
+    SqlRunner.run(sql, values)
+  end
 
-    def self.find(id)
-     sql = "SELECT * FROM source_languages WHERE id = $1"
-     values = [id]
-     results = SqlRunner.run(sql,values)[0]
-     language = SourceLanguage.new(results)
-     return language
-   end
+  def self.find(id)
+    sql = "SELECT * FROM source_languages WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql,values)[0]
+    language = SourceLanguage.new(results)
+    return language
+  end
 
-   def find_books
-      sql = "SELECT * FROM books WHERE source_language_id = $1"
-      values = [@id]
-      results = SqlRunner.run(sql, values)
-      books_array = results.map{|book| Book.new(book)}
-      return books_array
-    end
-
+  def find_books
+    sql = "SELECT * FROM books WHERE source_language_id = $1"
+    values = [@id]
+    results = SqlRunner.run(sql, values)
+    books_array = results.map{|book| Book.new(book)}
+    return books_array
+  end
 
 end

@@ -8,12 +8,12 @@
     <th>Stock</th>
     <th>Action</th>
   </tr>
-  <% for book in @books %>
-  <%if book.stock_level == "Low"%>
+    <% for book in @books %>
+    <%if book.stock_level == "Low"%>
   <tr>
     <td><%= book.author %></td>
     <td><%= book.title %></td>
-    <% book.check_cover_image %>
+  <% book.check_cover_image %>
     <td><img src="<%= book.cover_image %>" alt="Cover image of <%book.title%>" class="cover-image"></td>
     <td><%= book.stock_level %></td>
     <td><a href="/books/<%= book.id %>">View book</a></td>

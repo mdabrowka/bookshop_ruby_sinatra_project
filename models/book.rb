@@ -105,7 +105,7 @@ def stock_level #returns a message according to the stock level
   end
 end
 
-def markup #calculates markup
+def markup #calculates markup and rounds it up to 2 decimal places
   result = ((@sell_price).to_f / (@buy_price).to_f).round(2) * 100
   return result
 end

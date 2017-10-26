@@ -5,7 +5,7 @@ require_relative('../models/book.rb')
 class BookTest < MiniTest::Test
 
   def setup
-  @book1 = Book.new({
+    @book1 = Book.new({
     'title' => 'Sculptor\'s Daughter',
     'author_id' => '1',
     'quantity' => '7',
@@ -16,14 +16,12 @@ class BookTest < MiniTest::Test
     })
   end
 
-    def test_stock_level
-      assert_equal("Medium", @book1.stock_level)
-    end
+  def test_stock_level
+    assert_equal("Medium", @book1.stock_level)
+  end
 
-    def test_markup
-      assert_equal(2, @book1.markup)
-    end
-
-
+  def test_markup
+    assert_equal(2, @book1.markup)
+  end
 
 end

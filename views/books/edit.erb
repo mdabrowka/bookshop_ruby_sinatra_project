@@ -30,9 +30,9 @@
 
   <label for="language-select"> Source language: </label>
   <select id="language-select" type="text" name="source_language_id">
-  <% for source_language in @source_languages %>
-  <% if source_language.id == @book.source_language_id %>
-    <option selected ="selected" value ="<%= source_language.id%>"> <%= source_language.language %></option>
+    <% for source_language in @source_languages %>
+    <% if source_language.id == @book.source_language_id %>
+      <option selected ="selected" value ="<%= source_language.id%>"> <%= source_language.language %></option>
     <% else %>
     <option value="<%= source_language.id%>"> <%= source_language.language %></option>
   <% end %>
