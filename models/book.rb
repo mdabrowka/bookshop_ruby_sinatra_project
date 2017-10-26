@@ -53,6 +53,14 @@ def genre
   return genre.type
 end
 
+def source_language
+  sql = "SELECT * FROM source_languages WHERE id = $1"
+  values = [@source_language_id]
+  result = SqlRunner.run(sql, values)[0]
+  source_language = SourceLanguage.new(result)
+  return source_language.language
+end
+
 def self.delete_all()
   sql = "DELETE FROM books"
   values = []
@@ -80,11 +88,11 @@ def self.find(id)
   return book
 end
 
-def cover_image
-  if cover == ''
-    cover = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Blue_question_mark_icon.svg/2000px-Blue_question_mark_icon.svg.png'
+ def check_cover_image
+    if @cover_image == ''
+      @cover_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Blue_question_mark_icon.svg/2000px-Blue_question_mark_icon.svg.png'
+    end
   end
-end
 
 def stock_level
  case

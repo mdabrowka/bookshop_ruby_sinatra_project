@@ -13,6 +13,7 @@
   <tr>
     <td><%= book.author %></td>
     <td><%= book.title %></td>
+    <% book.check_cover_image %>
     <td><img src="<%= book.cover_image %>" alt="Cover image of <%book.title%>" class="cover-image"></td>
     <td><%= book.stock_level %></td>
     <td><a href="/books/<%= book.id %>">View book</a></td>

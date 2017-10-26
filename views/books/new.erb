@@ -19,8 +19,12 @@
       <% end %>
  </select>
 
-  <label for="language"> Source language: </label>
-  <input id="language" type="text" name="source_language"/>
+  <label for="language-select"> Select source language: </label>
+  <select id="language-select" type="text" name="source_language_id"/>
+    <% for source_language in @source_languages %>
+      <option value="<%= source_language.id %>"> <%= source_language.language %></option>
+      <% end %>
+</select>
 
   <label for="quantity"> Set quantity: </label>
   <input id="quantity" type="number" name="quantity" />
