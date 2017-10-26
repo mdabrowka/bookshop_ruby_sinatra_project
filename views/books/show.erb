@@ -2,14 +2,7 @@
 
 
 <fig>
-    <%
-      cover = @book.cover_image
-      if cover == ''
-        cover = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Blue_question_mark_icon.svg/2000px-Blue_question_mark_icon.svg.png'
-      end
-    %>
-    <img src="<%= cover %>" alt="Cover image of <%@book.title%>" class="big-cover-image">
-
+    <img src="<%= @book.cover_image %>" alt="Cover image of <%@book.title%>" class="big-cover-image">
     <ul>
       <li> Genre:
         <%= @book.genre %>

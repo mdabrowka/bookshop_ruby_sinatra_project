@@ -79,6 +79,12 @@ def self.find(id)
   return book
 end
 
+def cover_image
+  if cover == ''
+    cover = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Blue_question_mark_icon.svg/2000px-Blue_question_mark_icon.svg.png'
+  end
+end
+
 def stock_level
  case
     when @quantity <= 5

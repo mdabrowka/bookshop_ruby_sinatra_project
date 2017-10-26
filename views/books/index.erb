@@ -4,14 +4,18 @@
   <tr>
     <th>Author</th>
     <th>Title</th>
+    <th>Cover</th>
     <th>Stock</th>
+    <th>Markup</th>
     <th>Action</th>
   </tr>
 <% for book in @books %>
   <tr>
     <td><%= book.author %></td>
     <td><%= book.title %></td>
+      <td><img src="<%= book.cover_image %>" alt="Cover image of <%book.title%>" class="cover-image"></td>
     <td><span class="<%= book.stock_level.downcase %>"><%= book.stock_level %></span></td>
+    <td><%= book.markup %></td>
     <td><a href="/books/<%= book.id %>">View book</a></td>
   </tr>
 <% end %>
