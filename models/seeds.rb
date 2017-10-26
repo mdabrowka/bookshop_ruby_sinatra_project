@@ -5,10 +5,10 @@ require_relative('genre.rb')
 require_relative('source_language.rb')
 
 
-Book.delete_all
-Author.delete_all
-Genre.delete_all
-SourceLanguage.delete_all
+ Book.delete_all
+ Author.delete_all
+ Genre.delete_all
+ SourceLanguage.delete_all
 
 #Source language seeds
 source_language1 = SourceLanguage.new({'language' => 'Polish'})
@@ -82,7 +82,7 @@ author1 = Author.new({'first_name' => 'Clarice',
    'author_id' => author2.id,
    'quantity' => '23',
    'genre_id' => genre1.id,
-   'source_language' => source_language6.id,
+   'source_language_id' => source_language6.id,
    'buy_price' => '8',
    'sell_price' => '60',
    'cover_image' => 'https://thediplomat.com/wp-content/uploads/2016/07/thediplomat_2016-07-07_11-45-57.jpg'
@@ -94,7 +94,7 @@ author1 = Author.new({'first_name' => 'Clarice',
    'author_id' => author2.id,
    'quantity' => '34',
    'genre_id' => genre1.id,
-   'source_language' => source_language6.id,
+   'source_language_id' => source_language6.id,
    'buy_price' => '8',
    'sell_price' => '10',
    'cover_image' => 'https://static1.squarespace.com/static/5019421184ae7e81bd01bf4e/551ef206e4b0170ec8abdbe0/56bbf4f562cd94f5f8c27ae7/1455158518149/HA+8-2-16.jpeg'
@@ -106,7 +106,7 @@ author1 = Author.new({'first_name' => 'Clarice',
    'author_id' => author4.id,
    'quantity' => '27',
    'genre_id' => genre4.id,
-   'source_language' => source_language1.id,
+   'source_language_id' => source_language1.id,
    'buy_price' => '8',
    'sell_price' => '16',
    'cover_image' => 'https://images.gr-assets.com/books/1428234270l/25300957.jpg'
@@ -118,7 +118,7 @@ author1 = Author.new({'first_name' => 'Clarice',
    'author_id' => author1.id,
    'quantity' => '12',
    'genre_id' => genre1.id,
-   'source_language' => source_language3.id,
+   'source_language_id' => source_language3.id,
    'buy_price' => '6',
    'sell_price' => '13',
    'cover_image' => 'https://www.penguin.co.uk/content/dam/catalogue/pim/editions/277/9780141392035/cover.jpg'
@@ -130,7 +130,7 @@ author1 = Author.new({'first_name' => 'Clarice',
    'author_id' => author3.id,
    'quantity' => '5',
    'genre_id' => genre3.id,
-   'source_language' => source_language4.id,
+   'source_language_id' => source_language4.id,
    'buy_price' => '9',
    'sell_price' => '13',
    'cover_image' => 'https://cdn.shopify.com/s/files/1/0282/5792/products/stories_highres.jpg?v=1384460804'
@@ -142,7 +142,7 @@ author1 = Author.new({'first_name' => 'Clarice',
    'author_id' => author3.id,
    'quantity' => '3',
    'genre_id' => genre1.id,
-   'source_language' => source_language4.id,
+   'source_language_id' => source_language4.id,
    'buy_price' => '8',
    'sell_price' => '13',
    'cover_image' => 'https://images.gr-assets.com/books/1398195398l/6405181.jpg'
@@ -154,7 +154,7 @@ author1 = Author.new({'first_name' => 'Clarice',
    'author_id' => author1.id,
    'quantity' => '9',
    'genre_id' => genre3.id,
-   'source_language' => source_language3.id,
+   'source_language_id' => source_language3.id,
    'buy_price' => '8',
    'sell_price' => '16',
    'cover_image' => 'https://www.penguin.co.uk/content/dam/catalogue/pim/editions/81/9780141197388/cover.jpg'
@@ -166,7 +166,7 @@ author1 = Author.new({'first_name' => 'Clarice',
    'author_id' => author2.id,
    'quantity' => '14',
    'genre_id' => genre2.id,
-   'source_language' => source_language6.id,
+   'source_language_id' => source_language6.id,
    'buy_price' => '8',
    'sell_price' => '10',
    'cover_image' => 'https://images-eu.ssl-images-amazon.com/images/I/31zi0ttmuDL.jpg'

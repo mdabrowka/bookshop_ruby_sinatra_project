@@ -3,6 +3,7 @@ require( 'sinatra/contrib/all' )
 require_relative( '../models/book.rb' )
 require_relative( '../models/author.rb' )
 require_relative( '../models/genre.rb' )
+require_relative( '../models/source_language.rb' )
 
 
 
@@ -19,6 +20,7 @@ end
 get '/books/new' do #displays a new book form with dropdown menu of authors
   @authors = Author.all
   @genres = Genre.all
+  @source_languages = SourceLanguage.all
   erb(:"books/new")
 end
 
@@ -52,6 +54,7 @@ end
 get '/books/:id/edit' do #displays a form with pre-populated book info
   @authors = Author.all
   @genres = Genre.all
+  @source_languages = SourceLanguage.all
   @book = Book.find(params[:id])
   erb(:"books/edit")
 end

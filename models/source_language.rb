@@ -10,7 +10,7 @@ attr_accessor :language
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
-    @language = options['type']
+    @language = options['language']
   end
 
   def save
@@ -48,7 +48,7 @@ attr_accessor :language
     end
 
     def self.find(id)
-     sql = "SELECT * FROM languages WHERE id = $1"
+     sql = "SELECT * FROM source_languages WHERE id = $1"
      values = [id]
      results = SqlRunner.run(sql,values)[0]
      language = SourceLanguage.new(results)

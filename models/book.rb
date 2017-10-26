@@ -1,7 +1,8 @@
+require_relative('../db/sql_runner.rb')
 require_relative('author.rb')
 require_relative('genre.rb')
 require_relative('source_language.rb')
-require_relative('../db/sql_runner.rb')
+
 
 class Book
 
@@ -14,7 +15,7 @@ def initialize(options)
   @author_id = options['author_id'].to_i
   @quantity = options['quantity'].to_i
   @genre_id = options['genre_id'].to_i
-  @source_language_id = options['source_language_id']
+  @source_language_id = options['source_language_id'].to_i
   @buy_price = options['buy_price'].to_i
   @sell_price = options['sell_price'].to_i
   @cover_image = options['cover_image']
@@ -73,12 +74,12 @@ def delete
   SqlRunner.run(sql, values)
 end
 
-def update
-  sql = "UPDATE books SET (title, author_id, quantity, genre_id, source_language_id, buy_price, sell_price, cover_image) =
-  ($1, $2, $3, $4, $5, $6, $7, $8 ) WHERE id = $9"
-  values = [@title, @author_id, @quantity, @genre_id, @source_language_id, @buy_price, @sell_price, @cover_image, @id]
-  SqlRunner.run(sql, values)
-end
+ def update
+   sql = "UPDATE books SET (title, author_id, quantity, genre_id, source_language_id, buy_price, sell_price, cover_image) =
+   ($1, $2, $3, $4, $5, $6, $7, $8 ) WHERE id = $9"
+   values = [@title, @author_id, @quantity, @genre_id, @source_language_id, @buy_price, @sell_price, @cover_image, @id]
+   SqlRunner.run(sql, values)
+ end
 
 def self.find(id)
   sql = "SELECT * FROM books WHERE id = $1"
@@ -87,6 +88,7 @@ def self.find(id)
   book = Book.new(results)
   return book
 end
+
 
  def check_cover_image
     if @cover_image == ''

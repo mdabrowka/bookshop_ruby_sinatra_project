@@ -3,6 +3,7 @@ require( 'sinatra/contrib/all' )
 require_relative( '../models/book.rb' )
 require_relative( '../models/author.rb' )
 require_relative( '../models/genre.rb' )
+require_relative( '../models/source_language.rb' )
 
 
 get '/books/new_genre' do
