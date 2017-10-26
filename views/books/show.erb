@@ -27,8 +27,8 @@
       <span class="<%= @book.stock_level.downcase %>"><%= @book.stock_level %></span>
     </td>
     <td><%= @book.quantity %></td>
-    <td><%= @book.buy_price %></td>
-    <td><%= @book.sell_price %></td>
+    <td>&pound;<%= @book.buy_price %></td>
+    <td>&pound;<%= @book.sell_price %></td>
     <td><%= @book.markup %></td>
   </tr>
 </table>

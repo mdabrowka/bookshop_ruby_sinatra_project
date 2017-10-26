@@ -16,7 +16,7 @@
       <%book.check_cover_image%>
       <td><img src="<%= book.cover_image %>" alt="Cover image of <%book.title%>" class="cover-image"></td>
     <td><span class="<%= book.stock_level.downcase %>"><%= book.stock_level %></span></td>
-    <td><%= book.markup %></td>
+    <td><%= book.markup %>&#37;</td>
     <td><a href="/books/<%= book.id %>">View book</a></td>
   </tr>
 <% end %>
