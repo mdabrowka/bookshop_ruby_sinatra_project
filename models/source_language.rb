@@ -14,7 +14,7 @@ attr_accessor :language
   end
 
   def save
-    sql = "INSERT INTO source_languages (type) VALUES ($1) RETURNING *"
+    sql = "INSERT INTO source_languages (language) VALUES ($1) RETURNING *"
     values = [@language]
     result = SqlRunner.run(sql, values)[0]['id']
     @id = result.to_i
