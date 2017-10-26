@@ -5,7 +5,6 @@ require_relative('source_language.rb')
 
 
 class Book
-
 attr_reader :id
 attr_accessor :title, :author_id, :quantity, :genre_id, :source_language_id, :buy_price, :sell_price, :cover_image
 
@@ -38,7 +37,7 @@ def self.all
   return books
 end
 
-def author
+ def author #returns the author od the books
   sql = "SELECT * FROM authors WHERE id = $1"
   values = [@author_id]
   result = SqlRunner.run(sql, values)[0]
@@ -46,7 +45,7 @@ def author
   return author.full_name
 end
 
-def genre
+def genre #returns the genre of the book
   sql = "SELECT * FROM genres WHERE id = $1"
   values = [@genre_id]
   result = SqlRunner.run(sql, values)[0]
@@ -54,7 +53,7 @@ def genre
   return genre.type
 end
 
-def source_language
+def source_language #returns the source language of the book
   sql = "SELECT * FROM source_languages WHERE id = $1"
   values = [@source_language_id]
   result = SqlRunner.run(sql, values)[0]
@@ -89,14 +88,13 @@ def self.find(id)
   return book
 end
 
-
- def check_cover_image
+ def check_cover_image #sets cover image to a default image if image not given
     if @cover_image == ''
       @cover_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Blue_question_mark_icon.svg/2000px-Blue_question_mark_icon.svg.png'
     end
   end
 
-def stock_level
+def stock_level #returns a message according to the stock level
  case
     when @quantity <= 5
       return "Low"
@@ -107,9 +105,8 @@ def stock_level
   end
 end
 
-
-def markup
-  result = ((@sell_price).to_f / (@buy_price).to_f) * 100
+def markup #calculates markup
+  result = ((@sell_price).to_f / (@buy_price).to_f).round(2) * 100
   return result
 end
 

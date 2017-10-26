@@ -5,10 +5,10 @@ require_relative('../models/genre.rb')
 require_relative('../models/source_language.rb')
 
 
- Book.delete_all
- Author.delete_all
- Genre.delete_all
- SourceLanguage.delete_all
+Book.delete_all
+Author.delete_all
+Genre.delete_all
+SourceLanguage.delete_all
 
 #Source language seeds
 source_language1 = SourceLanguage.new({'language' => 'Polish'})
@@ -41,7 +41,6 @@ genre3.save
 
 genre4 = Genre.new({'type' => 'poetry'})
 genre4.save
-
 
 #Authors seeds
 author1 = Author.new({'first_name' => 'Clarice',
