@@ -37,7 +37,7 @@ def self.all
   return books
 end
 
- def author #returns the author od the books
+ def author #returns the author of the books
   sql = "SELECT * FROM authors WHERE id = $1"
   values = [@author_id]
   result = SqlRunner.run(sql, values)[0]
@@ -88,13 +88,13 @@ def self.find(id)
   return book
 end
 
- def check_cover_image #sets cover image to a default image if image not given
+ def check_cover_image #sets cover image to a default image if image not given -- you can set default cover image
     if @cover_image == ''
       @cover_image = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Blue_question_mark_icon.svg/2000px-Blue_question_mark_icon.svg.png'
     end
   end
 
-def stock_level #returns a message according to the stock level
+def stock_level #returns a message according to the stock level// create message for stock level // function should always have a verb for being more explicit
  case
     when @quantity <= 5
       return "Low"

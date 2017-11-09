@@ -53,7 +53,7 @@ attr_accessor :type
     genre = Genre.new(results)
     return genre
   end
-
+# again, vague naming of the function, make it more specific!
   def find_books
     sql = "SELECT * FROM books WHERE genre_id = $1"
     values = [@id]

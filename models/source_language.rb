@@ -54,7 +54,7 @@ attr_accessor :language
     language = SourceLanguage.new(results)
     return language
   end
-
+# confusing naming of the function, better specify what it actually returns
   def find_books
     sql = "SELECT * FROM books WHERE source_language_id = $1"
     values = [@id]
@@ -62,5 +62,7 @@ attr_accessor :language
     books_array = results.map{|book| Book.new(book)}
     return books_array
   end
+
+  # run runner could be a function that you call, because it's repeated
 
 end
